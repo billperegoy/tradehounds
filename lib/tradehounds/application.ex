@@ -13,7 +13,7 @@ defmodule Tradehounds.Application do
       # Start the Ecto repository
       supervisor(Tradehounds.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(TradehoundsWeb.Endpoint, []),
+      supervisor(TradehoundsWeb.Endpoint, [])
       # Start your own worker by calling: Tradehounds.Worker.start_link(arg1, arg2, arg3)
       # worker(Tradehounds.Worker, [arg1, arg2, arg3]),
     ]

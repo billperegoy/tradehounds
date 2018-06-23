@@ -28,8 +28,9 @@ defmodule TradehoundsWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/tradehounds_web/templates",
-                        namespace: TradehoundsWeb
+      use Phoenix.View,
+        root: "lib/tradehounds_web/templates",
+        namespace: TradehoundsWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]

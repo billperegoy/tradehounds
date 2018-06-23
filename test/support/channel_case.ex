@@ -25,13 +25,13 @@ defmodule TradehoundsWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tradehounds.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Tradehounds.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end
