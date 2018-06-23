@@ -40,7 +40,8 @@ defmodule Tradehounds.Mixfile do
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:dialyxir, "~> 1.0.0-rc.2", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0.0-rc.2", only: [:dev], runtime: false},
+      {:credo, "~> 0.8.8", only: [:dev], runtime: false}
     ]
   end
 
