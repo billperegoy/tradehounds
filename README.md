@@ -38,10 +38,11 @@ You should see the following output
    * For vim, follow these instructions: https://github.com/mhinz/vim-mix-format
 
 6. Run tests
-This command runs the entire CI suite including `format`, `credo`, `dialyzer`
+These commands run the entire CI suite including `format`, `credo`, `dialyzer`
 and `test`
 ```
-   mix verify
+   mix test     # Runs functional test suite
+   mix verify   # Runs static checking tools
 ```
 
 You may also run any of these individually with:
@@ -57,7 +58,7 @@ You may also run any of these individually with:
    mix phx.server
 ```
 
-8. To use an API enpoint:
+8. To use an API endpoint:
    * TBD
 
 ## Learn more about Phoenix

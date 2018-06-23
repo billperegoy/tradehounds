@@ -5,7 +5,7 @@ defmodule Tradehounds.Mixfile do
     [
       app: :tradehounds,
       version: "0.0.1",
-      elixir: "~> 1.4",
+      elixir: "~> 1.6",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -56,7 +56,7 @@ defmodule Tradehounds.Mixfile do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"],
-      verify: ["format --check-formatted", "credo", "dialyzer", "test"]
+      verify: ["format --check-formatted", "credo", "dialyzer"]
     ]
   end
 end
