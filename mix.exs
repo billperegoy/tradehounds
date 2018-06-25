@@ -11,7 +11,14 @@ defmodule Tradehounds.Mixfile do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      dialxzir: [plt_add_deps: :transitive]
+      dialxzir: [plt_add_deps: :transitive],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -41,7 +48,8 @@ defmodule Tradehounds.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:dialyxir, "~> 1.0.0-rc.2", only: [:dev], runtime: false},
-      {:credo, "~> 0.8.8", only: [:dev], runtime: false}
+      {:credo, "~> 0.8.8", only: [:dev], runtime: false},
+      {:excoveralls, "~> 0.7.4", only: [:test], runtime: false}
     ]
   end
 
