@@ -12,9 +12,9 @@
 ```
 
 2. Install Elixir and Erlang versions
-````
+```
     asdf install
-````
+```
 
 3. Confirm installation
 ```
@@ -27,17 +27,20 @@ You should see the following output
    erlang
 ```
 
-4. Setup the project
+4. Install postgresql
+   * http://postgresguide.com/setup/install.html
+
+5. Setup the project
 ```
    git clone <add path here>
    cd tradehounds
    ./bin/setup.sh
 ```
 
-5. Add the Elixir formatter to your editor setup
+6. Add the Elixir formatter to your editor setup
    * For vim, follow these instructions: https://github.com/mhinz/vim-mix-format
 
-6. Run tests
+7. Run tests
 These commands run the entire CI suite including `format`, `credo`, `dialyzer`
 and `test`
 ```
@@ -51,14 +54,15 @@ You may also run any of these individually with:
    mix credo
    mix dialyzer
    mix test
+   mix coveralls
 ```
 
-7. Start Phoenix endpoint
+8. Start Phoenix endpoint
 ```
    mix phx.server
 ```
 
-8. To use an API endpoint:
+9. To use an API endpoint:
    * TBD
 
 ## Learn more about Phoenix
