@@ -63,7 +63,13 @@ You may also run any of these individually with:
 ```
 
 9. To use an API endpoint:
-   * TBD
+   * Visit `localhost:4000:/api/v1/healthcheck`
+
+   You should see this JSON response:
+
+   ```
+   {"status" : "ok"}
+   ```
 
 ## Learn more about Phoenix
 

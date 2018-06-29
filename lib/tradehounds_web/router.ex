@@ -8,5 +8,9 @@ defmodule TradehoundsWeb.Router do
 
   scope "/api", TradehoundsWeb do
     pipe_through(:api)
+
+    scope "/v1" do
+      resources("/healthcheck", HealthcheckController, only: [:index])
+    end
   end
 end
