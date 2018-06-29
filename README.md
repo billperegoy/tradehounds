@@ -63,7 +63,7 @@ You may also run any of these individually with:
 ```
 
 9. To use an API endpoint:
-   * Visit `localhost:4000:/api/v1/healthcheck`
+   * Visit `localhost:4000/api/v1/healthcheck`
 
    You should see this JSON response:
 
