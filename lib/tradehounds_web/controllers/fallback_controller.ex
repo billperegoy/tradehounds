@@ -11,11 +11,4 @@ defmodule TradehoundsWeb.FallbackController do
     |> put_status(:unprocessable_entity)
     |> render(TradehoundsWeb.ChangesetView, "error.json", changeset: changeset)
   end
-
-  ## FIXXME - This makes dialyzer fail
-  # def call(conn, {:error, :not_found}) do
-  #  conn
-  #  |> put_status(:not_found)
-  #  |> render(TradehoundsWeb.ErrorView, :"404")
-  # end
 end
