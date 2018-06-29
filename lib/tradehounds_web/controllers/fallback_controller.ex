@@ -12,9 +12,10 @@ defmodule TradehoundsWeb.FallbackController do
     |> render(TradehoundsWeb.ChangesetView, "error.json", changeset: changeset)
   end
 
-  def call(conn, {:error, :not_found}) do
-    conn
-    |> put_status(:not_found)
-    |> render(TradehoundsWeb.ErrorView, :"404")
-  end
+  ## FIXXME - This makes dialyzer fail
+  # def call(conn, {:error, :not_found}) do
+  #  conn
+  #  |> put_status(:not_found)
+  #  |> render(TradehoundsWeb.ErrorView, :"404")
+  # end
 end
