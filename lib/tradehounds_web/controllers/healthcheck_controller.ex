@@ -2,7 +2,6 @@ defmodule TradehoundsWeb.HealthcheckController do
   use TradehoundsWeb, :controller
 
   alias Tradehounds.Admin
-  alias Tradehounds.Admin.Healthcheck
 
   action_fallback(TradehoundsWeb.FallbackController)
 

@@ -2,11 +2,8 @@ defmodule TradehoundsWeb.HealthcheckControllerTest do
   use TradehoundsWeb.ConnCase
 
   alias Tradehounds.Admin
-  alias Tradehounds.Admin.Healthcheck
 
   @create_attrs %{}
-  @update_attrs %{}
-  @invalid_attrs %{}
 
   def fixture(:healthcheck) do
     {:ok, healthcheck} = Admin.create_healthcheck(@create_attrs)
@@ -19,7 +16,11 @@ defmodule TradehoundsWeb.HealthcheckControllerTest do
 
   describe "index" do
     test "lists all healthchecks", %{conn: conn} do
-      conn = get(conn, healthcheck_path(conn, :index))
+      conn =
+        conn
+        |> get(healthcheck_path(conn, :index))
+        |> doc(description: "Perform healthceck", operation_id: "list_healthchecks")
+
       assert json_response(conn, 200)["status"] == "ok"
     end
   end

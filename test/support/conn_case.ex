@@ -20,6 +20,7 @@ defmodule TradehoundsWeb.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
       import TradehoundsWeb.Router.Helpers
+      import Bureaucrat.Helpers
 
       # The default endpoint for testing
       @endpoint TradehoundsWeb.Endpoint

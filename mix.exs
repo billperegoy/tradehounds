@@ -49,7 +49,8 @@ defmodule Tradehounds.Mixfile do
       {:cowboy, "~> 1.0"},
       {:dialyxir, "~> 1.0.0-rc.2", only: [:dev], runtime: false},
       {:credo, "~> 0.8.8", only: [:dev], runtime: false},
-      {:excoveralls, "~> 0.7.4", only: [:test], runtime: false}
+      {:excoveralls, "~> 0.7.4", only: [:test], runtime: false},
+      {:bureaucrat, "~> 0.2.4"}
     ]
   end
 

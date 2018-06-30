@@ -5,8 +5,6 @@ defmodule Tradehounds.Admin do
 
   import Ecto.Query, warn: false
 
-  alias Tradehounds.Admin.Healthcheck
-
   @doc """
   Returns the list of healthchecks.
 
