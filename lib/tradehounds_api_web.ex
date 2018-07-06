@@ -1,12 +1,12 @@
-defmodule TradehoundsWeb do
+defmodule TradehoundsApiWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use TradehoundsWeb, :controller
-      use TradehoundsWeb, :view
+      use TradehoundsApiWeb, :controller
+      use TradehoundsApiWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,10 +19,10 @@ defmodule TradehoundsWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: TradehoundsWeb
+      use Phoenix.Controller, namespace: TradehoundsApiWeb
       import Plug.Conn
-      import TradehoundsWeb.Router.Helpers
-      import TradehoundsWeb.Gettext
+      import TradehoundsApiWeb.Router.Helpers
+      import TradehoundsApiWeb.Gettext
     end
   end
 
@@ -30,14 +30,14 @@ defmodule TradehoundsWeb do
     quote do
       use Phoenix.View,
         root: "lib/tradehounds_web/templates",
-        namespace: TradehoundsWeb
+        namespace: TradehoundsApiWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
-      import TradehoundsWeb.Router.Helpers
-      import TradehoundsWeb.ErrorHelpers
-      import TradehoundsWeb.Gettext
+      import TradehoundsApiWeb.Router.Helpers
+      import TradehoundsApiWeb.ErrorHelpers
+      import TradehoundsApiWeb.Gettext
     end
   end
 
@@ -52,7 +52,7 @@ defmodule TradehoundsWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import TradehoundsWeb.Gettext
+      import TradehoundsApiWeb.Gettext
     end
   end
 

@@ -1,7 +1,7 @@
-defmodule Tradehounds.Application do
+defmodule TradehoundsApi.Application do
   @moduledoc ""
   use Application
-  alias TradehoundsWeb.Endpoint
+  alias TradehoundsApiWeb.Endpoint
 
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
@@ -11,16 +11,16 @@ defmodule Tradehounds.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Tradehounds.Repo, []),
+      supervisor(TradehoundsApi.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(TradehoundsWeb.Endpoint, [])
-      # Start your own worker by calling: Tradehounds.Worker.start_link(arg1, arg2, arg3)
-      # worker(Tradehounds.Worker, [arg1, arg2, arg3]),
+      supervisor(TradehoundsApiWeb.Endpoint, [])
+      # Start your own worker by calling: TradehoundsApi.Worker.start_link(arg1, arg2, arg3)
+      # worker(TradehoundsApi.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Tradehounds.Supervisor]
+    opts = [strategy: :one_for_one, name: TradehoundsApi.Supervisor]
     Supervisor.start_link(children, opts)
   end
 

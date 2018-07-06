@@ -1,8 +1,8 @@
-defmodule TradehoundsWeb.UserSocket do
+defmodule TradehoundsApiWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", TradehoundsWeb.RoomChannel
+  # channel "room:*", TradehoundsApiWeb.RoomChannel
 
   ## Transports
   transport(:websocket, Phoenix.Transports.WebSocket)
@@ -30,7 +30,7 @@ defmodule TradehoundsWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     TradehoundsWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     TradehoundsApiWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

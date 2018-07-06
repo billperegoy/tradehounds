@@ -1,4 +1,4 @@
-# Tradehounds
+# TradehoundsApi
 
 ## Project setup
 

@@ -1,10 +1,10 @@
 # API Documentation
 
-  * [TradehoundsWeb.HealthcheckController](#tradehoundsweb-healthcheckcontroller)
-    * [index](#tradehoundsweb-healthcheckcontroller-index)
+  * [TradehoundsApiWeb.HealthcheckController](#tradehoundsapiweb-healthcheckcontroller)
+    * [index](#tradehoundsapiweb-healthcheckcontroller-index)
 
-## TradehoundsWeb.HealthcheckController
-### <a id=tradehoundsweb-healthcheckcontroller-index></a>index
+## TradehoundsApiWeb.HealthcheckController
+### <a id=tradehoundsapiweb-healthcheckcontroller-index></a>index
 #### Perform healthceck
 ##### Request
 * __Method:__ GET

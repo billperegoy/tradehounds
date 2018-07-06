@@ -1,4 +1,4 @@
-defmodule Tradehounds.Repo do
+defmodule TradehoundsApi.Repo do
   use Ecto.Repo, otp_app: :tradehounds
 
   @doc """

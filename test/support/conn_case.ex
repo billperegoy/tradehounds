@@ -1,4 +1,4 @@
-defmodule TradehoundsWeb.ConnCase do
+defmodule TradehoundsApiWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,19 +19,19 @@ defmodule TradehoundsWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import TradehoundsWeb.Router.Helpers
+      import TradehoundsApiWeb.Router.Helpers
       import Bureaucrat.Helpers
 
       # The default endpoint for testing
-      @endpoint TradehoundsWeb.Endpoint
+      @endpoint TradehoundsApiWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tradehounds.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TradehoundsApi.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Tradehounds.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TradehoundsApi.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

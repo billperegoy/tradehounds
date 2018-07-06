@@ -1,4 +1,4 @@
-defmodule TradehoundsWeb.ChannelCase do
+defmodule TradehoundsApiWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule TradehoundsWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint TradehoundsWeb.Endpoint
+      @endpoint TradehoundsApiWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Tradehounds.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TradehoundsApi.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Tradehounds.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TradehoundsApi.Repo, {:shared, self()})
     end
 
     :ok

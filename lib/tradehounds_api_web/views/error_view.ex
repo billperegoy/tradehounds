@@ -1,5 +1,5 @@
-defmodule TradehoundsWeb.ErrorView do
-  use TradehoundsWeb, :view
+defmodule TradehoundsApiWeb.ErrorView do
+  use TradehoundsApiWeb, :view
   alias Phoenix.Controller
 
   # If you want to customize a particular status code

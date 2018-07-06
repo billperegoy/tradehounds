@@ -1,4 +1,4 @@
-defmodule Tradehounds.Admin do
+defmodule TradehoundsApi.Admin do
   @moduledoc """
   The Admin context.
   """

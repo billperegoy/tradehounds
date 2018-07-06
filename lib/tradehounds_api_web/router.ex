@@ -1,12 +1,12 @@
-defmodule TradehoundsWeb.Router do
-  use TradehoundsWeb, :router
+defmodule TradehoundsApiWeb.Router do
+  use TradehoundsApiWeb, :router
   @dialyzer {:nowarn_function, call: 2}
 
   pipeline :api do
     plug(:accepts, ["json"])
   end
 
-  scope "/api", TradehoundsWeb do
+  scope "/api", TradehoundsApiWeb do
     pipe_through(:api)
 
     scope "/v1" do

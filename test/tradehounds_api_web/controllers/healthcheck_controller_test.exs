@@ -1,5 +1,5 @@
-defmodule TradehoundsWeb.HealthcheckControllerTest do
-  use TradehoundsWeb.ConnCase
+defmodule TradehoundsApiWeb.HealthcheckControllerTest do
+  use TradehoundsApiWeb.ConnCase
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}

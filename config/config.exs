@@ -6,14 +6,14 @@
 use Mix.Config
 
 # General application configuration
-config :tradehounds, ecto_repos: [Tradehounds.Repo]
+config :tradehounds, ecto_repos: [TradehoundsApi.Repo]
 
 # Configures the endpoint
-config :tradehounds, TradehoundsWeb.Endpoint,
+config :tradehounds, TradehoundsApiWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "5Jd7GRXs5HpEF1MU+VNVqZvwuTMDIqVcQ2JVgBD1ErRJgpEcMX5k7nY3TKI/O7yU",
-  render_errors: [view: TradehoundsWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Tradehounds.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: TradehoundsApiWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: TradehoundsApi.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

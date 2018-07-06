@@ -1,7 +1,7 @@
-defmodule Tradehounds.AdminTest do
-  use Tradehounds.DataCase
+defmodule TradehoundsApi.AdminTest do
+  use TradehoundsApi.DataCase
 
-  alias Tradehounds.Admin
+  alias TradehoundsApi.Admin
 
   describe "healthchecks" do
     test "list_healthchecks/0 returns all healthchecks" do

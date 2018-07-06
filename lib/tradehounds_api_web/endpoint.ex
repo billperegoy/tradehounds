@@ -1,7 +1,7 @@
-defmodule TradehoundsWeb.Endpoint do
+defmodule TradehoundsApiWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :tradehounds
 
-  socket("/socket", TradehoundsWeb.UserSocket)
+  socket("/socket", TradehoundsApiWeb.UserSocket)
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -43,7 +43,7 @@ defmodule TradehoundsWeb.Endpoint do
     signing_salt: "T+RtgCEG"
   )
 
-  plug(TradehoundsWeb.Router)
+  plug(TradehoundsApiWeb.Router)
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

@@ -1,4 +1,4 @@
-defmodule Tradehounds.Mixfile do
+defmodule TradehoundsApi.Mixfile do
   use Mix.Project
 
   def project do
@@ -27,7 +27,7 @@ defmodule Tradehounds.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Tradehounds.Application, []},
+      mod: {TradehoundsApi.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
